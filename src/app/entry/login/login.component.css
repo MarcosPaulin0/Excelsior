@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Condensed:wght@400;700&display=swap');
+
+button, span{
+  cursor: pointer;
+}
+.container{
+  display: flex;
+  width: 100%;
+  height: 635px;
+  background-image: url(/assets/img/background.png);
+}
+.logo{
+  display: block;
+  padding-left: 0px;
+  width: 200px;
+}
+.logo img{
+  width: 200px;
+  height: 80px;
+  margin: 76px;
+}
+.formulario{
+  background: #181B19;
+  width: 492.77px;
+  height: 510px;
+  box-shadow:0px 0 7px 11px rgba(247, 248, 250, 0.33);
+  border-radius: 24px;
+  margin: 110px 250px 40px 250px;
+}
+.titulo-formulario{
+  display: block;
+  place-items: center;
+  width: 70px;
+  margin: 0 215px;
+  padding-top: 80px;
+}
+.titulo-formulario h2{
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 30px;
+  color: #F7F8FA;
+}
+.campos-input{
+  padding: 10px 50px;
+}
+.campos-input input{
+  width: 385.05px;
+  height: 56.79px;
+  border: 1px solid #979797;
+  background-color: #181B19;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #F7F8FA;
+  padding-left: 20px;
+  letter-spacing: 0.25px;
+}
+.campos-input input::placeholder{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F7F8FA;
+}
+.nickname{
+  padding-top: 30px;
+  padding-bottom: 36px;
+}
+span{
+  display: block;
+  position: relative;
+  float: right;
+  color: #F7F8FA;
+  margin: -40px 22px 0 0;
+}
+.btnEntrar{
+  position: absolute;
+  width: 191.25px;
+  height: 55.26px;
+  margin: 30px 150px;
+}
+.btnEntrar button{
+  background: #ED1D24;
+  border-radius: 4px;
+  width: 191.25px;
+  height: 55.26px;
+  font-family: "Roboto Condensed";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #F7F8FA;
+}
+.btnEntrar button[disabled]{
+  opacity: 0.5;
+}
+.linkAccount{
+  float: right;
+  margin-top: 110px;
+  margin-right: 40px;
+}
+.linkAccount a {
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: #F7F8FA;
+}

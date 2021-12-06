@@ -1,0 +1,88 @@
+<div class="container">
+
+  <div class="logo">
+    <img src="/assets/img/logo_Marvel.png" alt="">
+  </div>
+
+  <div class="formulario">
+
+    <div class="titulo-formulario">
+      <h2>Register</h2>
+    </div>
+
+    <h3>Adress Data</h3>
+
+    <form [formGroup]="cadastroAdress" (ngSubmit)="enviarDados()">
+
+      <div class="campos-input">
+
+        <div class="cep">
+         <input type="text" placeholder="CEP" formControlName='cep' (blur)="consultaCEP()" mask="00000-000"
+         >
+         <!-- (blur)="consultaCEP()"-->
+         <app-message
+         *ngIf="cadastroAdress.get('cep')?.errors?.required &&
+         cadastroAdress.get('cep')?.touched"
+          message="*required"
+         >
+         </app-message>
+        </div>
+
+        <div class="split-adress">
+          <div>
+            <input id="adress" type="text" placeholder="Address" formControlName='adress' >
+            <app-message
+              *ngIf="cadastroAdress.get('adress')?.errors?.required &&
+              cadastroAdress.get('adress')?.touched"
+              message="*required"
+            >
+            </app-message>
+          </div>
+          <div>
+            <input id="number" type="text" placeholder="No." formControlName='number' mask="00 || 000 || 0000">
+            <app-message
+              *ngIf="cadastroAdress.get('number')?.errors?.required &&
+              cadastroAdress.get('number')?.touched"
+              message="*required"
+            >
+            </app-message>
+          </div>
+        </div>
+
+        <input type="text"  placeholder="Complement" formControlName='complement'>
+
+        <div  class="split-adress">
+          <div>
+            <input id="district" type="text" placeholder="District" formControlName='district'>
+            <app-message
+              *ngIf="cadastroAdress.get('district')?.errors?.required &&
+              cadastroAdress.get('district')?.touched"
+              message="*required"
+            >
+            </app-message>
+          </div>
+          <div>
+            <input id="city" type="text" placeholder="City" formControlName='city'>
+            <app-message
+            *ngIf="cadastroAdress.get('city')?.errors?.required &&
+            cadastroAdress.get('city')?.touched"
+            message="*required"
+            >
+            </app-message>
+          </div>
+        </div>
+      </div>
+
+      <div class="btnEntrar">
+        <button [disabled]="cadastroAdress.invalid" (click)="cadastrar()">Finish</button>
+      </div>
+
+    </form>
+    <div class="linkLogin">
+      <a routerLink="../login">Login&nbsp; ></a>
+    </div>
+  </div>
+
+</div>
+
+

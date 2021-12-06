@@ -1,0 +1,83 @@
+<div class="container">
+
+  <div class="logo">
+    <img src="/assets/img/logo_Marvel.png" alt="">
+  </div>
+
+
+  <div class="formulario">
+
+    <div class="titulo-formulario">
+      <h2>Register</h2>
+    </div>
+
+    <h3>Payment Data</h3>
+
+    <form [formGroup]="cadastroPayment" (ngSubmit)="onSubmit()">
+
+      <div class="campos-input">
+
+        <div class="cardNumber">
+          <input type="text" placeholder="Card Number" formControlName='cardNumber'
+          mask="0000.0000.0000.0000">
+          <app-message
+          *ngIf="cadastroPayment.get('cardNumber')?.errors?.required &&
+          cadastroPayment.get('cardNumber')?.touched"
+          message="*required"
+          >
+          </app-message>
+        </div>
+
+        <div class="split-validity">
+          <div>
+            <input id="validity" type="datetime" placeholder="Validity" formControlName='validity' mask="00/00">
+            <app-message
+            *ngIf="cadastroPayment.get('validity')?.errors?.required &&
+            cadastroPayment.get('validity')?.touched"
+            message="*required"
+            >
+            </app-message>
+          </div>
+          <div>
+            <input id="cvv" type="text" placeholder="CVV" formControlName='cvv' mask="000">
+            <app-message
+            *ngIf="cadastroPayment.get('cvv')?.errors?.required &&
+            cadastroPayment.get('cvv')?.touched"
+            message="*required"
+            >
+            </app-message>
+          </div>
+        </div>
+
+        <input type="text" id="cardName" placeholder="Cardholder Name" formControlName='cardholderName' >
+        <app-message
+        *ngIf="cadastroPayment.get('cardholderName')?.errors?.required &&
+        cadastroPayment.get('cardholderName')?.touched"
+        message="*required"
+        >
+        </app-message>
+
+        <input type="text" placeholder="CPF of the Holder" formControlName='cpf'
+        mask="000.000.000-00">
+        <app-message
+        *ngIf="cadastroPayment.get('cpf')?.errors?.required &&
+        cadastroPayment.get('cpf')?.touched"
+        message="*required"
+        >
+        </app-message>
+
+
+        <div class="btnEntrar">
+          <button [disabled]="cadastroPayment.invalid"  (click)="cadastrar()"  >Continue</button>
+        </div>
+
+      </div>
+    </form>
+
+    <div class="linkLogin">
+      <a routerLink="../login">Login&nbsp; ></a>
+    </div>
+
+  </div>
+</div>
+

@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="logo">
+    <img src="/assets/img/logo_Marvel.png" alt="">
+  </div>
+
+  <div class="formulario">
+
+    <div class="titulo-formulario">
+      <h2>Login</h2>
+    </div>
+    <form> <!--(ngSubmit)="onSubmit(f)" #f="ngF"-->
+
+      <div class="campos-input">
+        <div class="nickname">
+         <input type="text"  placeholder="Nickname" required minlength="3" maxlength="10"
+          >
+        </div>
+
+        <div class="password"></div>
+        <input    id="eye" [type]="hide ? 'password':'text'"
+        minlength="4" maxlength="8" size="10"
+         placeholder="Password" required>
+
+        <span class="material-icons" matSuffix (click) ="hide = !hide">
+          {{hide ? 'visibility':'visibility_off'}}
+        </span>
+      </div>
+
+      <div class="btnEntrar">
+        <button [disabled]="">Enter</button>
+      </div>
+
+    </form>
+    <div class="linkAccount">
+      <a routerLink='../account'>Register&nbsp; ></a>
+    </div>
+  </div>
+</div>
+
+
+
+

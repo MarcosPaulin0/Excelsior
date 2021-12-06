@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Condensed:wght@400;700&display=swap');
+
+a{
+  cursor: pointer;
+}
+.header {
+  background-color: #272827;
+  height: 100px;
+}
+.nav{
+  margin-left: 20px;
+  width: 140px;
+}
+.nav a{
+  text-decoration: none;
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #f7f8fa;
+}
+#login{
+  margin-left: 25px;
+  width: 50px;
+}
+.nav a:hover{
+
+  border-bottom: 2px solid #FFFFFF;
+
+}
+.logo{
+  display:flex;
+  position:absolute;
+  margin-left: 1160px;
+  padding-top: 2px;
+
+}
+.logo img{
+  height: 40px;
+  width: 90px;
+
+}

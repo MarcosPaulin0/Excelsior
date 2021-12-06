@@ -1,0 +1,133 @@
+<div class="container">
+  <div class="logo">
+    <img src="/assets/img/logo_Marvel.png" alt="">
+  </div>
+
+  <div class="formulario">
+
+     <div class="titulo-formulario">
+        <h2>Register</h2>
+      </div>
+
+      <h3>Account Data</h3>
+    <!-- property binding pra sempre que o form modificar, modificar no template -->
+    <form [formGroup]="cadastroAccount" (ngSubmit)="onSubmit()">
+
+      <div class="campos-input" >
+
+        <div class="nickname">
+         <input type="text" placeholder="Nickname" formControlName='nickname' >
+          <app-message
+            *ngIf="cadastroAccount.get('nickname')?.errors?.required &&
+            cadastroAccount.get('nickname')?.touched"
+            message="*required"
+          >
+          </app-message><br>
+          <!-- Validar para caracteres especiais [ - . _]-->
+          <app-message
+            *ngIf="cadastroAccount.get('nickname')?.invalid &&
+            (cadastroAccount.get('nickname')?.dirty ||
+            cadastroAccount.get('nickname')?.touched)
+            "
+            message="*min 3~max 15 e [ . - _ ]"
+          >
+          </app-message>
+        </div>
+
+        <input type="text" placeholder="First Name" formControlName='firstName'>
+        <app-message
+          *ngIf="cadastroAccount.get('firstName')?.errors?.required &&
+          cadastroAccount.get('firstName')?.touched"
+          message="*required"
+        >
+        </app-message><br>
+        <app-message
+          *ngIf="cadastroAccount.get('firstName')?.invalid &&
+          (cadastroAccount.get('firstName')?.dirty ||
+          cadastroAccount.get('firstName')?.touched)
+          "
+          message="*min 3~max 15 - ex: John"
+        >
+        </app-message>
+
+
+        <input type="text" placeholder="Last Name" formControlName='lastName'>
+        <app-message
+        *ngIf="cadastroAccount.get('lastName')?.errors?.required &&
+        cadastroAccount.get('lastName')?.touched"
+         message="*required"
+        >
+        </app-message><br>
+        <app-message
+          *ngIf="cadastroAccount.get('lastName')?.invalid &&
+          (cadastroAccount.get('lastName')?.dirty ||
+          cadastroAccount.get('lastName')?.touched)
+          "
+          message="*min 3~max 15 - ex: Wood"
+        >
+        </app-message>
+
+        <input id="email" type="email" required email placeholder="E-mail" formControlName='email'>
+        <app-message
+        *ngIf="cadastroAccount.get('email')?.errors?.required &&
+        cadastroAccount.get('email')?.touched"
+         message="*required"
+        >
+        </app-message>
+        <app-message
+          *ngIf="cadastroAccount.get('email')?.errors?.email &&
+          cadastroAccount.get('email')?.touched
+          "
+          message="*invalid"
+        >
+        </app-message>
+
+       <input type="tel" placeholder="Contact" formControlName='contact' prefix="+55"
+        mask=" (00) 90000-0000">
+        <app-message
+        *ngIf="cadastroAccount.get('contact')?.errors?.required &&
+        cadastroAccount.get('contact')?.touched"
+         message="*required"
+        >
+        </app-message>
+
+
+        <div class="password">
+          <input    id="eye" [type]="hide ? 'password':'text'"
+          placeholder="Password"  maxlength="8" name="password" formControlName='password'>
+
+          <span class="material-icons" matSuffix (click) ="hide = !hide">
+            {{hide ? 'visibility':'visibility_off'}}
+          </span>
+
+          <app-message
+          *ngIf="cadastroAccount.get('password')?.errors?.required &&
+          cadastroAccount.get('password')?.touched"
+           message="*required"
+          >
+          </app-message><br>
+          <app-message
+            *ngIf="cadastroAccount.get('password')?.invalid &&
+            (cadastroAccount.get('password')?.dirty ||
+            cadastroAccount.get('password')?.touched)
+            "
+            message="*invalid"
+          >
+          </app-message>
+
+        </div>
+
+      <div class="btnEntrar">
+        <button type="submit" [disabled]="cadastroAccount.invalid" (click)="cadastrar()">Continue</button>
+      </div>
+
+      </div>
+
+    </form>
+    <div class="linkLogin">
+      <a [routerLink]="['../login']">Login&nbsp; ></a>
+    </div>
+  </div>
+
+</div>
+
