@@ -26,30 +26,28 @@ a{
   width: 50px;
 }
 .nav a:hover{
-
   border-bottom: 2px solid #FFFFFF;
-
 }
 .logo{
   display:flex;
   position:absolute;
   margin-left: 1160px;
   padding-top: 2px;
-
 }
 .logo img{
   height: 40px;
   width: 90px;
 }
-.titulo{
-  width: 170px;
-  margin: 40px 0 80px 30px;
+.link-home{
+  width: 218px;
+  margin: 40px 0 10px 70px;
 }
-.titulo h2{
-  font-family:'Inter';
+.link-home a{
+  text-decoration: none;
+  font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
-  font-size: 26px;
-  line-height: 29px;
+  font-size: 24px;
+  line-height: 28px;
   color: #000000;
 }

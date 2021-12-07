@@ -83,7 +83,7 @@
         </app-message>
 
        <input type="tel" placeholder="Contact" formControlName='contact' prefix="+55"
-        mask=" (00) 90000-0000">
+        mask=" (00) 00000-0000">
         <app-message
         *ngIf="cadastroAccount.get('contact')?.errors?.required &&
         cadastroAccount.get('contact')?.touched"
@@ -118,7 +118,7 @@
         </div>
 
       <div class="btnEntrar">
-        <button type="submit" [disabled]="cadastroAccount.invalid" (click)="cadastrar()">Continue</button>
+        <button type="submit" [disabled]="cadastroAccount.invalid" (click)="onSubmit()">Continue</button>
       </div>
 
       </div>

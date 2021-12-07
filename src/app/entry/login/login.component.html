@@ -8,26 +8,40 @@
     <div class="titulo-formulario">
       <h2>Login</h2>
     </div>
-    <form> <!--(ngSubmit)="onSubmit(f)" #f="ngF"-->
+    <form [formGroup]="login"> <!--(ngSubmit)="onSubmit(f)" #f="ngF"-->
 
       <div class="campos-input">
         <div class="nickname">
-         <input type="text"  placeholder="Nickname" required minlength="3" maxlength="10"
+         <input id="nickname" type="text"  placeholder="Nickname" formControlName='nickname' minlength="3" maxlength="10"
           >
+          <app-message
+          *ngIf="login.get('nickname')?.errors?.required &&
+          login.get('nickname')?.touched"
+          message="*required"
+          >
+          </app-message>
         </div>
 
         <div class="password"></div>
-        <input    id="eye" [type]="hide ? 'password':'text'"
+        <input id="eye" [type]="hide ? 'password':'text'"
         minlength="4" maxlength="8" size="10"
-         placeholder="Password" required>
+         placeholder="Password" formControlName='password'>
 
         <span class="material-icons" matSuffix (click) ="hide = !hide">
           {{hide ? 'visibility':'visibility_off'}}
         </span>
+
+        <app-message
+        *ngIf="login.get('password')?.errors?.required &&
+        login.get('password')?.touched"
+        message="*required"
+        >
+        </app-message>
+
       </div>
 
       <div class="btnEntrar">
-        <button [disabled]="">Enter</button>
+        <button [disabled]="login.invalid" (click)="onSubmit()" >Enter</button>
       </div>
 
     </form>

@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 import { User } from '../user';
 
 
@@ -14,8 +15,9 @@ export class AccountComponent implements OnInit {
 
   hide = true;
   cadastroAccount!: FormGroup;
+  user: any = {};
 
-  constructor( private fb: FormBuilder,private router: Router) { }
+  constructor( private fb: FormBuilder,private router: Router , private userService: UserService) { }
 
   ngOnInit(): void {
    this.cadastroAccount = this.fb.group({
@@ -69,28 +71,22 @@ export class AccountComponent implements OnInit {
     if(this.cadastroAccount.valid){
       const dadosFormulario = this.cadastroAccount.value;
 
-      const user = new User(
-      dadosFormulario.nickname,
-      dadosFormulario.firstName,
-      dadosFormulario.lastName,
-      dadosFormulario.email,
-      dadosFormulario.contact,
-      dadosFormulario.password
-
-      );
-      console.log(user);
+      this.user = Object.assign(this.user, this.cadastroAccount.value);
+      this.userService.addUser(this.user);
       this.router.navigateByUrl('/payment');
     }else{
       alert('Preencha os campos')
       this.cadastroAccount.reset();
     }
-    console.log(this.cadastroAccount.value);
+
   }
 
   cadastrar(){
     //const accountUser = this.cadastroAccount.getRawValue() as NovoUsuario;
-    localStorage.setItem('cadastroAccount', JSON.stringify(this.cadastroAccount.value));
+    //localStorage.setItem('cadastroAccount', JSON.stringify(this.cadastroAccount.value));
   }
+
+
 
 
 }

@@ -1,1 +1,51 @@
-<p>profile works!</p>
+<mat-toolbar class="header">
+  <div class="nav">
+    <a [routerLink]="['/profile']">Profile</a>
+    <a id="login" (click)="logout()"  >Log out</a>
+  </div>
+  <div class="logo">
+    <img src="/assets/img/logo_Marvel.png">
+  </div>
+</mat-toolbar>
+
+<div class="container">
+
+  <div class="link-home">
+    <a routerLink="/home"><&nbsp;Back to Comic Books </a>
+  </div>
+
+  <div class="titulo">
+    <h1>Personal Data</h1>
+  </div>
+
+  <div class="infos">
+
+    <div class="nickname">
+      <label for="nickname">Nickname:</label>
+    </div>
+    <div class="name">
+      <label for="Name">Name:</label>
+    </div>
+    <div class="email">
+      <label for="email">E-Mail:</label>
+    </div>
+    <div class="contact">
+      <label for="contact">Contact:</label>
+    </div>
+    <div class="adress">
+      <label for="adress">Adress:</label>
+    </div>
+
+  </div>
+
+  <div class="payment">
+    <div class="form-payment">
+      <label for="payment">Form of Payment:</label>
+    </div>
+    <div class="card">
+
+    </div>
+  </div>
+
+
+</div>

@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { EntryRoutingModule } from './entry-routing.module';
-import { BackgroundComponent } from './background/background.component';
 import { LoginComponent } from './login/login.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AdressComponent } from './adress/adress.component';
@@ -18,7 +17,6 @@ import { CepService } from './adress/cepService/cep.service';
 
 @NgModule({
   declarations: [
-    BackgroundComponent,
     LoginComponent,
     AccountComponent,
     PaymentComponent,

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,23 +10,22 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  nickname = '';
-  password = '';
+
   hide = true;
+  login !: FormGroup;
 
   constructor( private router: Router) { }
 
   ngOnInit(): void {
+    this.login = new FormGroup({
+      nickname: new FormControl(null, Validators.required),
+      password: new FormControl(null, Validators.required),
+
+    })
+
   }
 
-  onSubmit(form: NgForm) {
-    let dados = `
-    Nickname: ${form.value.nickname}
-    Senha: ${form.value.password}`;
-    console.log(form);
-
-    console.log(dados);
-
+  onSubmit() {
 
   }
 

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { CepService } from './cepService/cep.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-adress',
@@ -15,7 +16,8 @@ export class AdressComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    private cepService: CepService
+    private cepService: CepService,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -61,7 +63,16 @@ export class AdressComponent implements OnInit {
 
   cadastrar(){
     //const accountUser = this.cadastroAccount.getRawValue() as NovoUsuario;
-    localStorage.setItem('cadastroAdress', JSON.stringify(this.cadastroAdress.value));
+    window.localStorage.setItem('cadastroAdress', JSON.stringify(this.cadastroAdress.value));
+    window.localStorage.getItem('cadastroAdress');
+    let usuario = JSON.parse(window.localStorage.getItem('cadastroAdress') || '[]');
+
+    let recuperaCep = (localStorage.getItem('cep'));
+    let adress = '';
+    let number = '';
+
+    console.log(usuario)
+    this.router.navigateByUrl('/login');
   }
 
 

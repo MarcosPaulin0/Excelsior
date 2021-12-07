@@ -74,13 +74,23 @@ span{
   position: relative;
   float: right;
   color: #F7F8FA;
-  margin: -40px 22px 0 0;
+  margin: -65px 22px 0 0;
 }
+#nickname{
+  margin-bottom: 24px;
+}
+.password{
+  margin-top: -30px;
+}
+#eye{
+  margin-bottom: 24px;
+}
+
 .btnEntrar{
   position: absolute;
   width: 191.25px;
   height: 55.26px;
-  margin: 30px 150px;
+  margin: 10px 150px;
 }
 .btnEntrar button{
   background: #ED1D24;

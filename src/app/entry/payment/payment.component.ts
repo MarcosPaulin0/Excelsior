@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
@@ -12,7 +13,7 @@ export class PaymentComponent implements OnInit {
   cadastroPayment!: FormGroup;
 
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.cadastroPayment = this.fb.group({
@@ -21,11 +22,11 @@ export class PaymentComponent implements OnInit {
       cvv: [ null,[Validators.required,]],
       cardholderName: [
         '',
-        [
+
           Validators.required,
 
 
-        ]],
+        ],
       cpf:['', [Validators.required]],
     })
   }
@@ -33,7 +34,7 @@ export class PaymentComponent implements OnInit {
 
   onSubmit(){
     if(this.cadastroPayment.valid){
-       console.log(this.cadastroPayment.value);
+      console.log(this.cadastroPayment.value);
 
     }
 
@@ -42,9 +43,8 @@ export class PaymentComponent implements OnInit {
   cadastrar(){
     //const accountUser = this.cadastroAccount.getRawValue() as NovoUsuario;
     localStorage.setItem('cadastroPayment', JSON.stringify(this.cadastroPayment.value));
+    this.router.navigateByUrl('/adress');
   }
 
-  //cardNameUpper(){
-    //this.cadastroPayment.value('cardholderName'.toUpperCase);
-  //}
+
 }

@@ -1,25 +1,17 @@
-import { MarvelService } from './../services/marvel.service';
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 
-
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-comic-details',
+  templateUrl: './comic-details.component.html',
+  styleUrls: ['./comic-details.component.css']
 })
-export class HomeComponent implements OnInit {
-  router: any;
+export class ComicDetailsComponent implements OnInit {
 
-
-  constructor(private comic: MarvelService) { }
+  constructor() { }
 
   ngOnInit(): void {
-
   }
-
-
-
 
   logout(){
     Swal.fire({

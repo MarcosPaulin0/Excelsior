@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Condensed:wght@400;700&display=swap');
+
+a{
+  cursor: pointer;
+}
+.header {
+  background-color: #272827;
+  height: 100px;
+}
+.nav{
+  margin-left: 20px;
+  width: 140px;
+}
+.nav a{
+  text-decoration: none;
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #f7f8fa;
+}
+#login{
+  margin-left: 25px;
+  width: 50px;
+}
+.nav a:hover{
+  border-bottom: 2px solid #FFFFFF;
+}
+.logo{
+  display:flex;
+  position:absolute;
+  margin-left: 1160px;
+  padding-top: 2px;
+}
+.logo img{
+  height: 40px;
+  width: 90px;
+}
+.link-home{
+  width: 218px;
+  margin: 40px 0 10px 70px;
+}
+.link-home a{
+  text-decoration: none;
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+.titulo {
+  width: 250px;
+  display: flex;
+  margin: 40px 550px 10px 550px;
+}
+.titulo h1{
+  font-family:'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+}
+.infos{
+  width: 727px;
+  height: 254px;
+  margin: 0 320px 0 320px;
+}
+.nickname{
+  width: 122px;
+  height: 20px;
+  padding: 38px 215px 4px 215px ;
+}
+.nickname label{
+  font-family:'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+.name{
+  height: 20px;
+  width: 60px;
+  padding: 38px 0 0 206px;
+}
+.name label{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+.email{
+  padding: 46px 0 0 60px;
+  width: 67px;
+  height: 24px;
+}
+.email label{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+.contact{
+  width: 82px;
+  height: 24px;
+  float: right;
+  padding-right: 260px;
+  margin-top: -27px;
+}
+.contact label{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+.adress{
+  padding: 42px 0 0 0 ;
+}
+.adress label{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+.payment{
+  width: 800px;
+  height: 240px;
+  margin: 40px 300px;
+}
+.form-payment{
+  display: flex;
+  width: 167px;
+  height: 24px;
+  padding: 100px 0 100px 60px;
+}
+.form-payment label{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+.card{
+  height: 200px;
+  width: 370px;
+  background: #272827;
+  border-radius: 20px;
+  float: right;
+  margin: -210px 180px 0 0;
+}
+
+

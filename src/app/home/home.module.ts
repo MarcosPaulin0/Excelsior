@@ -5,12 +5,14 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ComicDetailsComponent } from './comic-details/comic-details.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    ComicDetailsComponent
   ],
   imports: [
     CommonModule,
