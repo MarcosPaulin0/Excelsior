@@ -53,3 +53,14 @@ a{
   line-height: 29px;
   color: #000000;
 }
+.comics{
+  margin: 20px 300px;
+}
+.comics h4{
+  font-family:'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}

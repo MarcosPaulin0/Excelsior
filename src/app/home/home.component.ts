@@ -10,11 +10,20 @@ import Swal from 'sweetalert2';
 })
 export class HomeComponent implements OnInit {
   router: any;
+  public hqMarvel: any = [];
 
 
-  constructor(private comic: MarvelService) { }
+
+
+  constructor(private marvelService: MarvelService) { }
 
   ngOnInit(): void {
+
+   this.marvelService.callHqMarvel().subscribe((resultado: any) => {
+      if(resultado && resultado.data && resultado.data.results)
+      this.hqMarvel =  resultado.data.results;
+      console.log(this.hqMarvel);
+    });
 
   }
 

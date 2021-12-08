@@ -74,10 +74,8 @@ export class AccountComponent implements OnInit {
       this.user = Object.assign(this.user, this.cadastroAccount.value);
       this.userService.addUser(this.user);
       this.router.navigateByUrl('/payment');
-    }else{
-      alert('Preencha os campos')
-      this.cadastroAccount.reset();
     }
+
 
   }
 

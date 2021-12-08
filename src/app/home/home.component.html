@@ -12,6 +12,14 @@
   <div class="titulo">
     <h2>Comic Books</h2>
   </div>
+  <div class="comics" *ngFor="let hq of hqMarvel">
+  <div class="imagens">
+    <a routerLink="/details"><img src="{{hq.images.path}}+'.'+{{hq.images.extension}}" alt=""></a>
+  </div>
+    <h4><b>{{hq.title}}</b></h4>
+    <h5><b>{{hq.creators}}</b></h5>
+
+  </div>
 
 </div>
 

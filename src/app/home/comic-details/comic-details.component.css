@@ -51,3 +51,127 @@ a{
   line-height: 28px;
   color: #000000;
 }
+.container{
+  background-color: #F8F6F6;
+}
+
+/* ----- img e infos ----- */
+.img-hq{
+  border: 1px solid red;
+  width: 250px;
+  height: 280px;
+  margin: 60px 0 0 200px;
+}
+.infos-titulo{
+  display: flex;
+  border: 1px solid red;
+  width: 450px;
+  float: right;
+  margin: -277px 310px 0 40px;
+}
+.infos-titulo h2{
+  font-family:' Roboto Condensed';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+.infos-details{
+  border: 1px solid red;
+  width: 400px;
+  height: 80px;
+  float: right;
+  margin: -210px 350px -10px 40px;
+}
+.infos-details label{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+}
+#published{
+  border: 1px solid green;
+  margin: 0 100px 20px 0;
+  width: 190px;
+}
+#writer{
+  border: 1px solid green;
+  margin: -42px 4px 20px 20px;
+  float: right;
+  width: 190px;
+}
+#penciller{
+  border: 1px solid green;
+  width: 190px;
+}
+#cover{
+  border: 1px solid green;
+  margin: -22px 4px 0 20px;
+  float: right;
+  width: 190px;
+}
+.infos-description{
+  display: flex;
+  border: 1px solid red;
+  float: right;
+  margin: -120px 350px 0 0;
+  width: 400px;
+  height: 100px;
+}
+#description{
+
+}
+#cast{
+
+}
+/* ------ botão ------ */
+.buy{
+  border: 1px solid red;
+  width: 814px;
+  height: 138px;
+  background-color: #F7F8FA;
+  border-radius: 20px;
+  margin: 30px 200px 20px 200px;
+}
+.acquire h2{
+  display: flex;
+  font-family:'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  width: 210px;
+  margin: 20px 0 0 100px;
+}
+.acquire p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+  width: 335px;
+  display: flex;
+  margin: 10px 0 0 40px;
+}
+.btn{
+  float: right;
+  margin: -30px 50px 0 0;
+}
+.btn button{
+  background-color: #ED1D24;
+  border-radius: 4px;
+  border-style: none;
+  font-family:'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #F7F8FA;
+  width: 225.23px;
+  height: 55.26px;
+}

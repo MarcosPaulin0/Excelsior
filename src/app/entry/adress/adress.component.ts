@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class AdressComponent implements OnInit {
 
   cadastroAdress!: FormGroup;
+  retornoAdress: any;
 
   constructor(
     private fb: FormBuilder,
@@ -63,15 +64,13 @@ export class AdressComponent implements OnInit {
 
   cadastrar(){
     //const accountUser = this.cadastroAccount.getRawValue() as NovoUsuario;
-    window.localStorage.setItem('cadastroAdress', JSON.stringify(this.cadastroAdress.value));
+    window.localStorage.setItem('cadastroAdress', JSON.stringify('cadastroAdress'));
     window.localStorage.getItem('cadastroAdress');
-    let usuario = JSON.parse(window.localStorage.getItem('cadastroAdress') || '[]');
+    let usuario = JSON.parse(window.localStorage.getItem('cadastroAdress') || '{}');
 
-    let recuperaCep = (localStorage.getItem('cep'));
-    let adress = '';
-    let number = '';
+    this.retornoAdress = (localStorage.getItem('cadastroAdress'));
 
-    console.log(usuario)
+    console.log(this.retornoAdress.value);
     this.router.navigateByUrl('/login');
   }
 
@@ -80,6 +79,7 @@ export class AdressComponent implements OnInit {
 
   enviarDados(){
     console.log(this.cadastroAdress.value);
+
   }
 
 }
