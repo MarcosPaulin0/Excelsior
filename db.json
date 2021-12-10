@@ -1,0 +1,136 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "nickname": "Markz7",
+      "firstName": "Marcos",
+      "lastName": "Paulino",
+      "email": "markz7@gmail.com",
+      "contact": "11966743295",
+      "password": "a12345",
+      "cardNumber": "445673211809",
+      "validity": "0928",
+      "cardHolderName": " Marcos Paulino",
+      "cpf": "34392912307",
+      "cep": "04194260",
+      "adress": "Av dos Ourives",
+      "number": "480",
+      "complement": "bloco 5 apto 81",
+      "district": "Parque Bristol",
+      "city": "São Paulo"
+    },
+    {
+      "nickname": "Jose.99",
+      "firstName": "Jose",
+      "lastName": "Almeida",
+      "email": "jose_almeida@gmail.com",
+      "contact": "11998896745",
+      "password": "jose1234",
+      "id": 2
+    },
+    {
+      "cardNumber": "3453464564575675",
+      "validity": "0929",
+      "cvv": "435",
+      "cardholderName": "Jose Almeida",
+      "cpf": "34654767675",
+      "id": 3
+    },
+    {
+      "cep": "09655900",
+      "adress": "Avenida do Taboão",
+      "number": "565",
+      "complement": "",
+      "district": "Taboão",
+      "city": "São Bernardo do Campo",
+      "id": 4
+    },
+    {
+      "nickname": "Joao.86",
+      "firstName": "Joao",
+      "lastName": "Almeida",
+      "email": "joao_almeida@gmail.com",
+      "contact": "11345345345",
+      "password": "joao1234",
+      "id": 5
+    },
+    {
+      "cardNumber": "3453453456456456",
+      "validity": "0929",
+      "cvv": "455",
+      "cardholderName": "Joao Almeida",
+      "cpf": "34534645767",
+      "id": 6
+    },
+    {
+      "cep": "04194260",
+      "adress": "Avenida dos Ourives",
+      "number": "567",
+      "complement": "",
+      "district": "Jardim São Savério",
+      "city": "São Paulo",
+      "id": 7
+    },
+    {
+      "nickname": "Wal.91",
+      "firstName": "Walwenia",
+      "lastName": "Farias",
+      "email": "wal@gmail.com",
+      "contact": "11345346454",
+      "password": "12345",
+      "id": 8
+    },
+    {
+      "cardNumber": "2345346456457457",
+      "validity": "4535",
+      "cvv": "543",
+      "cardholderName": "walwenia farias",
+      "cpf": "43534563464",
+      "id": 9
+    },
+    {
+      "cep": "04194260",
+      "adress": "Avenida dos Ourives",
+      "number": "5453",
+      "complement": "",
+      "district": "Jardim São Savério",
+      "city": "São Paulo",
+      "id": 10
+    },
+    {
+      "nickname": "Henrique_",
+      "firstName": "Henrique",
+      "lastName": "Bimbo",
+      "email": "h@gmail.com",
+      "contact": "53453453453",
+      "password": "54354353",
+      "id": 11
+    },
+    {
+      "nickname": "Adilson_",
+      "firstName": "Adilson",
+      "lastName": "Gonçalves",
+      "email": "adilson@gmail.com",
+      "contact": "34535345645",
+      "password": "43534543",
+      "id": 12
+    },
+    {
+      "cardNumber": "5464576457567657",
+      "validity": "4674",
+      "cvv": "456",
+      "cardholderName": "msdakoflsdnfosdfhjsd",
+      "cpf": "34346456453",
+      "id": 13
+    },
+    {
+      "cep": "03211120",
+      "adress": "Rua Antônio de Vicenzo",
+      "number": "4545",
+      "complement": "",
+      "district": "Sítio da Figueira",
+      "city": "São Paulo",
+      "id": 14
+    }
+  ]
+}

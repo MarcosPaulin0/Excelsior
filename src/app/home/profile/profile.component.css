@@ -64,81 +64,58 @@ a{
   line-height: 42px;
   color: #000000;
 }
+/* ----  informacoes do profile ---- */
 .infos{
   width: 727px;
   height: 254px;
   margin: 0 320px 0 320px;
 }
-.nickname{
-  width: 122px;
-  height: 20px;
-  padding: 38px 215px 4px 215px ;
-}
-.nickname label{
-  font-family:'Inter';
+.info-titulo{
+  font-family: 'Inter';
   font-style: normal;
-  font-weight: normal;
+  font-weight: bolder;
   font-size: 24px;
   line-height: 24px;
   letter-spacing: 0.15px;
   color: #000000;
 }
+.info-conteudo{
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight:100;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+.nickname{
+  width: 400px;
+  height: 20px;
+  padding: 10px 0 4px 0 ;
+  margin: 20px 0 0 200px;
+}
 .name{
   height: 20px;
-  width: 60px;
-  padding: 38px 0 0 206px;
-}
-.name label{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.15px;
-  color: #000000;
+  width: 400px;
+  margin: 30px 0 0 192px;
 }
 .email{
-  padding: 46px 0 0 60px;
-  width: 67px;
+  width: 310px;
   height: 24px;
-}
-.email label{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.15px;
-  color: #000000;
+  margin: 40px 0 0 66px;
 }
 .contact{
-  width: 82px;
+  width: 300px;
   height: 24px;
   float: right;
-  padding-right: 260px;
-  margin-top: -27px;
-}
-.contact label{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.15px;
-  color: #000000;
+  margin: -27px 0 0 0;
 }
 .adress{
   padding: 42px 0 0 0 ;
+  width: 900px;
 }
-.adress label{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.15px;
-  color: #000000;
-}
+
+/* ----- cartao ----- */
 .payment{
   width: 800px;
   height: 240px;
@@ -146,14 +123,11 @@ a{
 }
 .form-payment{
   display: flex;
-  width: 167px;
+  width: 200px;
   height: 24px;
-  padding: 100px 0 100px 60px;
-}
-.form-payment label{
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: normal;
+  padding: 60px 0 100px 60px;
+  font-family:'Inter';
+  font-weight: bolder;
   font-size: 20px;
   line-height: 23px;
   color: #000000;
@@ -166,5 +140,43 @@ a{
   float: right;
   margin: -210px 180px 0 0;
 }
+#cardNumber{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #F7F8FA;
+  width: 260px;
+  display: flex;
+  margin: 110px 0 0 20px;
+}
+#cardHolderName{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #F7F8FA;
+  width: 260px;
+  display: flex;
+  margin: 20px 0 0 20px;
+}
+#validity{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #F7F8FA;
+  width: 60px;
+  display: flex;
+  margin: -30px 0 0 290px;
+}
+
+
 
 

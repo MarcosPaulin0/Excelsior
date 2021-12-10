@@ -26,24 +26,26 @@ a{
   width: 50px;
 }
 .nav a:hover{
-
   border-bottom: 2px solid #FFFFFF;
-
 }
 .logo{
   display:flex;
   position:absolute;
   margin-left: 1160px;
   padding-top: 2px;
-
 }
 .logo img{
   height: 40px;
   width: 90px;
 }
+.container{
+  border: 1px solid red;
+  margin: 0 180px 0 120px;
+  background-color: #F8F6F6;
+}
 .titulo{
   width: 170px;
-  margin: 40px 0 80px 30px;
+  margin: 40px 0 80px 0;
 }
 .titulo h2{
   font-family:'Inter';
@@ -54,7 +56,17 @@ a{
   color: #000000;
 }
 .comics{
-  margin: 20px 300px;
+  margin: 20px 0;
+  border: 1px solid red;
+  width: 180px;
+  display: inline-block;
+  padding: 20px;
+  margin-left: 8px;
+
+}
+.imagens a{
+  display: inline ;
+  justify-content: space-evenly;
 }
 .comics h4{
   font-family:'Inter';

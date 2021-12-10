@@ -49,7 +49,7 @@
           </div>
         </div>
 
-        <input type="text" id="cardName" placeholder="Cardholder Name" formControlName='cardholderName' >
+        <input type="text" id="cardName" placeholder="Cardholder Name" formControlName='cardHolderName' >
         <app-message
         *ngIf="cadastroPayment.get('cardholderName')?.errors?.required &&
         cadastroPayment.get('cardholderName')?.touched"
@@ -69,7 +69,7 @@
 
 
         <div class="btnEntrar">
-          <button [disabled]="cadastroPayment.invalid"  (click)="cadastrar()"  >Continue</button>
+          <button [disabled]="cadastroPayment.invalid"  (click)="onSubmit()"  >Continue</button>
         </div>
 
       </div>

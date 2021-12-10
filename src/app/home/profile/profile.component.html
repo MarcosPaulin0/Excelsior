@@ -21,19 +21,24 @@
   <div class="infos">
 
     <div class="nickname">
-      <label for="nickname">Nickname:</label>
+      <label for="nickname" class="info-titulo">Nickname: </label>
+      <label for="" class="info-conteudo"> {{nickname}} </label>
     </div>
     <div class="name">
-      <label for="Name">Name:</label>
+      <label for="Name" class="info-titulo">Name:</label>
+      <label for="" class="info-conteudo"> {{name}} </label>
     </div>
     <div class="email">
-      <label for="email">E-Mail:</label>
+      <label for="email" class="info-titulo">E-Mail:</label>
+      <label for="" class="info-conteudo"> {{email}} </label>
     </div>
     <div class="contact">
-      <label for="contact">Contact:</label>
+      <label for="contact" class="info-titulo">Contact:</label>
+      <label for="" class="info-conteudo"> {{contact}} </label>
     </div>
     <div class="adress">
-      <label for="adress">Adress:</label>
+      <label for="adress" class="info-titulo">Adress:</label>
+      <label for="adress" class="info-conteudo"> {{adress}} </label>
     </div>
 
   </div>
@@ -43,6 +48,15 @@
       <label for="payment">Form of Payment:</label>
     </div>
     <div class="card">
+      <div id="cardNumber">
+        <label for="">**** **** **** {{cardNumber}} </label>
+      </div>
+      <div id="cardHolderName">
+         <label for="">{{cardHolderName}}</label>
+      </div>
+      <div id="validity">
+        <label for="">{{validity}}</label>
+      </div>
 
     </div>
   </div>

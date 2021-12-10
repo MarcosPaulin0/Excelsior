@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
@@ -15,9 +16,10 @@ export class AccountComponent implements OnInit {
 
   hide = true;
   cadastroAccount!: FormGroup;
-  user: any = {};
 
-  constructor( private fb: FormBuilder,private router: Router , private userService: UserService) { }
+
+  constructor( private fb: FormBuilder,private router: Router ,
+     private userService: UserService, private http: HttpClient) { }
 
   ngOnInit(): void {
    this.cadastroAccount = this.fb.group({
@@ -69,24 +71,19 @@ export class AccountComponent implements OnInit {
   onSubmit() {
 
     if(this.cadastroAccount.valid){
-      const dadosFormulario = this.cadastroAccount.value;
+      window.localStorage.setItem('cadastroAccount', JSON.stringify(this.cadastroAccount.value));
 
-      this.user = Object.assign(this.user, this.cadastroAccount.value);
-      this.userService.addUser(this.user);
-      this.router.navigateByUrl('/payment');
+    this.router.navigateByUrl('/payment');
+
     }
-
-
   }
-
-  cadastrar(){
-    //const accountUser = this.cadastroAccount.getRawValue() as NovoUsuario;
-    //localStorage.setItem('cadastroAccount', JSON.stringify(this.cadastroAccount.value));
-  }
-
-
-
 
 }
+
+
+
+
+
+
 
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MarvelService } from 'src/app/services/marvel.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -8,7 +9,7 @@ import Swal from 'sweetalert2';
 })
 export class ComicDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private marvelService: MarvelService) { }
 
   ngOnInit(): void {
   }
@@ -27,6 +28,12 @@ export class ComicDetailsComponent implements OnInit {
       } else if (result.isDenied) {
         Swal.fire('', '', 'info')
       }
+    })
+  }
+
+  onSubmit(){
+    Swal.fire({
+      title: 'Successful purchase!',
     })
   }
 }

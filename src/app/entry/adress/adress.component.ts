@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
 export class AdressComponent implements OnInit {
 
   cadastroAdress!: FormGroup;
-  retornoAdress: any;
+
+
 
   constructor(
     private fb: FormBuilder,
@@ -63,25 +64,21 @@ export class AdressComponent implements OnInit {
   }
 
   cadastrar(){
-    //const accountUser = this.cadastroAccount.getRawValue() as NovoUsuario;
-    window.localStorage.setItem('cadastroAdress', JSON.stringify('cadastroAdress'));
-    window.localStorage.getItem('cadastroAdress');
-    let usuario = JSON.parse(window.localStorage.getItem('cadastroAdress') || '{}');
+      if(this.cadastroAdress.valid){
 
-    this.retornoAdress = (localStorage.getItem('cadastroAdress'));
+        window.localStorage.setItem('cadastroAdress', JSON.stringify(this.cadastroAdress.value));
 
-    console.log(this.retornoAdress.value);
-    this.router.navigateByUrl('/login');
-  }
-
-
-
-
-  enviarDados(){
-    console.log(this.cadastroAdress.value);
-
-  }
-
+       /* window.localStorage.getItem('cadastroAdress');
+        let userAdress = JSON.parse(window.localStorage.getItem('cadastroAdress') || '{}');
+        let cep = (userAdress.cep);
+        let adress = (userAdress.adress);
+        let number = (userAdress.number);
+        let  complement= (userAdress.complement);
+        let district = (userAdress.district);
+        let city = (userAdress.city);*/
+      }
+        this.router.navigateByUrl('/login');
+      }
 }
 function form(dados: Object, form: any): void {
   throw new Error('Function not implemented.');
