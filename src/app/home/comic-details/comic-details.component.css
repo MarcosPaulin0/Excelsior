@@ -57,14 +57,14 @@ a{
 
 /* ----- img e infos ----- */
 .img-hq{
-  border: 1px solid red;
+
   width: 250px;
   height: 280px;
   margin: 60px 0 0 200px;
 }
 .infos-titulo{
   display: flex;
-  border: 1px solid red;
+
   width: 450px;
   float: right;
   margin: -277px 310px 0 40px;
@@ -78,54 +78,68 @@ a{
   color: #000000;
 }
 .infos-details{
-  border: 1px solid red;
+
   width: 400px;
   height: 80px;
   float: right;
   margin: -210px 350px -10px 40px;
 }
-.infos-details label{
+.titulo-details{
   font-family: 'Inter';
   font-style: normal;
-  font-weight: normal;
+  font-weight: bolder;
   font-size: 13px;
   line-height: 16px;
   color: #000000;
+
 }
 #published{
-  border: 1px solid green;
+
   margin: 0 100px 20px 0;
   width: 190px;
 }
 #writer{
-  border: 1px solid green;
   margin: -42px 4px 20px 20px;
   float: right;
   width: 190px;
 }
 #penciller{
-  border: 1px solid green;
+
   width: 190px;
 }
 #cover{
-  border: 1px solid green;
+
   margin: -22px 4px 0 20px;
   float: right;
   width: 190px;
 }
 .infos-description{
   display: flex;
-  border: 1px solid red;
+
   float: right;
   margin: -120px 350px 0 0;
   width: 400px;
-  height: 100px;
+  height: 110px;
+}
+#description{
+  display: flex;
+  margin: 0 0 4px 0;
+  width: 400px;
+  height: 80px;
+
+}
+#cast{
+  display: flex;
+  width: 400px;
+  height: 20px;
+  margin: 89px 0 0 -400px;
+
 }
 
 
 /* ------ botão ------ */
 .buy{
-  border: 1px solid red;
+
   width: 814px;
   height: 138px;
   background-color: #F7F8FA;

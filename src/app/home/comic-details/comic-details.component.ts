@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MarvelService } from 'src/app/services/marvel.service';
+import {MatSnackBar, MatSnackBarConfig, MatSnackBarModule} from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -9,7 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class ComicDetailsComponent implements OnInit {
 
-  constructor(private marvelService: MarvelService) { }
+  constructor(private marvelService: MarvelService, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -32,8 +33,14 @@ export class ComicDetailsComponent implements OnInit {
   }
 
   onSubmit(){
-    Swal.fire({
-      title: 'Successful purchase!',
-    })
+    this._snackBar.open('Successful purchase!', 'X',{
+      horizontalPosition: 'center',
+      panelClass: ['white-snackbar'],
+    });
   }
+
+
+
+
+
 }

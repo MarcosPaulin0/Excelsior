@@ -26,13 +26,13 @@ export class ProfileComponent implements OnInit {
     this.name = (usuarioAccount.firstName + '' + usuarioAccount.lastName);
     this.email = (usuarioAccount.email);
     let contactVar = (usuarioAccount.contact);
-    let novoContato= contactVar.slice(0,6)+ '-' + contactVar.slice(7);
+    let novoContato= contactVar.slice(0,2)+ ' ' + contactVar.slice(2,7)+ '-' + contactVar.slice(7,11);
     this.contact = novoContato;
 
     //window.localStorage.getItem('cadastroAdress');
     let usuarioAdress = JSON.parse(window.localStorage.getItem('cadastroAdress') || '{}');
     this.adress = (usuarioAdress.adress+', '+ usuarioAdress.number +', '+ usuarioAdress.complement
-    + ','+ usuarioAdress.district + ', '+ usuarioAdress.city + ', ' + usuarioAdress.cep);
+    + ','+ usuarioAdress.district + ', '+ usuarioAdress.city + ', ' + usuarioAdress.cep.slice(0,5)+ '-' +  usuarioAdress.cep.slice(5,8) );
 
 
     //window.localStorage.getItem('cadastroPayment');

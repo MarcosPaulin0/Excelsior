@@ -1,5 +1,5 @@
 import { MarvelService } from './../services/marvel.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import Swal from 'sweetalert2';
 
 
@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 })
 export class HomeComponent implements OnInit {
   router: any;
-  public hqMarvel: any = [];
+ @Output() public hqMarvel: any = [];
 
 
 
