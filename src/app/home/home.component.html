@@ -8,20 +8,47 @@
   </div>
 </mat-toolbar>
 
-<div class="container">
+
+ <div class="container">
+
   <div class="titulo">
     <h2>Comic Books</h2>
   </div>
-  <div class="comics" *ngFor="let hq of hqMarvel">
-  <div class="imagens">
-    <a routerLink="/details"><img src="{{hq.thumbnail.path}}/portrait_fantastic.jpg" alt=""></a>
-  </div>
-  <h4><b>{{hq.title}}</b></h4>
+
+  <div class="conteudo" >
+
+    <div class="" fxLayout="row wrap">
+      <div fxFlex="25" fxFlex.md="33" fxFlex.sm="40" fxFlex.xs="100"  fxLayout="column"
+      *ngFor="let hq of hqMarvel | paginate: { itemsPerPage: 12, currentPage: page }; let i = index" id="item">
+
+        <div class="imagens">
+        <a [routerLink]="['/details/:id']"><img src="{{hq.thumbnail.path}}/portrait_incredible.jpg" alt=""></a>
+        </div>
+
+        <div class="titleHq">
+          <p><b>{{hq.title}}</b></p>
+        </div>
+
+        <div id="author">
+          {{hq.creators.items[0] ? hq.creators.items[0].name : 'Sem autor'}}
+        </div>
+
+    </div>
 
 
   </div>
+  <div class="pagina">
+    <pagination-controls (pageChange)="page = $event" ></pagination-controls>
+  </div>
+
 
 </div>
+
+
+
+
+
+
 
 
 

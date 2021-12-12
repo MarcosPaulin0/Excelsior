@@ -26,4 +26,20 @@ export class MarvelService {
       })
     })
   }
+
+  callHqMarvelDetails(id: number) {
+    //debugger;
+    const timestamp = new Date().getTime().toString();
+    const publicKey = "b63e144e5af75a05920e45fa07fb97cd";
+    const privateKey = "01800b949ba04a2c4215e23e69f51374641719d7";
+    const md5 = new Md5();
+
+    const hash = md5.appendStr(timestamp + privateKey + publicKey).end();
+    return this.httpClient.get<any>(`${this.marvelUrl}/v1/public/comics/${id}?ts=${timestamp}&apikey=
+    ${publicKey}&hash=${hash}`,  {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json",
+      })
+    })
+  }
 }

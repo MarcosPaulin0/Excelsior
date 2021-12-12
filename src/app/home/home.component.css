@@ -3,13 +3,15 @@
 
 a{
   cursor: pointer;
+
+
 }
 .header {
   background-color: #272827;
   height: 100px;
 }
 .nav{
-  margin-left: 20px;
+  margin-left: 80px;
   width: 140px;
 }
 .nav a{
@@ -17,12 +19,12 @@ a{
   font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 22px;
+  line-height: 25px;
   color: #f7f8fa;
 }
 #login{
-  margin-left: 25px;
+  margin-left: 65px;
   width: 50px;
 }
 .nav a:hover{
@@ -39,13 +41,12 @@ a{
   width: 90px;
 }
 .container{
-  border: 1px solid red;
-  margin: 0 180px 0 120px;
-  background-color: #F8F6F6;
+   background-color: #F8F6F6;
 }
 .titulo{
   width: 170px;
-  margin: 40px 0 80px 0;
+  margin: 2px 0 80px 63px;
+  padding-top: 40px;
 }
 .titulo h2{
   font-family:'Inter';
@@ -55,24 +56,33 @@ a{
   line-height: 29px;
   color: #000000;
 }
-.comics{
-  margin: 20px 0;
-  border: 1px solid red;
-  width: 180px;
-  display: inline-block;
-  padding: 20px;
-  margin-left: 8px;
+.conteudo{
+  margin:0 0 0 66px;
+  padding-bottom: 20px;
 
 }
-.imagens a{
-  display: inline ;
-  justify-content: space-evenly;
-}
-.comics h4{
+.titleHq p{
   font-family:'Inter';
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 14px;
   color: #000000;
+  width: 230px;
+  margin: 0 0 30px 0;
 }
+.pagina{
+
+
+  display: flex;
+  float:right;
+  margin: 20px 100px 0 0;
+  font-family:'Inter';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+

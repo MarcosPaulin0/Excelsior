@@ -9,7 +9,7 @@ a{
   height: 100px;
 }
 .nav{
-  margin-left: 20px;
+  margin-left: 80px;
   width: 140px;
 }
 .nav a{
@@ -17,12 +17,12 @@ a{
   font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 22px;
+  line-height: 25px;
   color: #f7f8fa;
 }
 #login{
-  margin-left: 25px;
+  margin-left: 65px;
   width: 50px;
 }
 .nav a:hover{
@@ -38,6 +38,7 @@ a{
   height: 40px;
   width: 90px;
 }
+/* --- Conteudo --- */
 .link-home{
   width: 218px;
   margin: 40px 0 10px 70px;

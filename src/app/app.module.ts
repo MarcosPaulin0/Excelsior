@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     HttpClientModule,
     HomeModule,
-
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

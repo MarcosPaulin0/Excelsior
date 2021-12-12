@@ -1,7 +1,9 @@
+import { UserService } from 'src/app/services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { MarvelService } from 'src/app/services/marvel.service';
 import {MatSnackBar, MatSnackBarConfig, MatSnackBarModule} from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-comic-details',
@@ -10,9 +12,29 @@ import Swal from 'sweetalert2';
 })
 export class ComicDetailsComponent implements OnInit {
 
-  constructor(private marvelService: MarvelService, private _snackBar: MatSnackBar) { }
+  idComic!: any;
+  comicDetails: any;
+  comicTitle!: string;
+
+  constructor(private marvelService: MarvelService, private _snackBar: MatSnackBar,
+    private _activatedRoute: ActivatedRoute,) {
+    this._activatedRoute.params.subscribe(params => {
+        //debugger
+        this.idComic = params['id'];
+      });
+  }
 
   ngOnInit(): void {
+     // debugger
+    this.marvelService.callHqMarvelDetails(this.idComic).subscribe((resultado: any) => {
+      //debugger
+      if(resultado && resultado.data && resultado.data.results)
+        this.idComic =  resultado.data.results;
+
+      //this.comicTitle = this.comicDetails.title;
+
+      console.log(this.idComic);
+    });
   }
 
   logout(){
@@ -33,7 +55,7 @@ export class ComicDetailsComponent implements OnInit {
   }
 
   onSubmit(){
-    this._snackBar.open('Successful purchase!', 'X',{
+    this._snackBar.open('Successful purchase!', 'x',{
       horizontalPosition: 'center',
       panelClass: ['white-snackbar'],
     });

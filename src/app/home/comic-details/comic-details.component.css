@@ -5,25 +5,26 @@ a{
   cursor: pointer;
 }
 .header {
-  background-color: #272827;
+  background-color:  #272827;
   height: 100px;
 }
 .nav{
-  margin-left: 20px;
-  width: 140px;
+  margin-left: 96px;
+  width: 220px;
+  padding-top: 37px;
 }
 .nav a{
   text-decoration: none;
   font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 22px;
+  line-height: 25px;
   color: #f7f8fa;
 }
 #login{
-  margin-left: 25px;
-  width: 50px;
+  margin-left: 65px;
+  width: 70px;
 }
 .nav a:hover{
   border-bottom: 2px solid #FFFFFF;
@@ -31,16 +32,24 @@ a{
 .logo{
   display:flex;
   position:absolute;
-  margin-left: 1160px;
+  margin:-37px 0 0 1176px;
   padding-top: 2px;
 }
 .logo img{
   height: 40px;
   width: 90px;
 }
+
+/* ---- conteudo ---- */
+
+.container{
+  background-color: #F8F6F6;
+  margin-top: 20px;
+}
 .link-home{
   width: 218px;
-  margin: 40px 0 10px 70px;
+  margin: 2px 0 10px 190px;
+  padding-top: 40px;
 }
 .link-home a{
   text-decoration: none;
@@ -51,26 +60,21 @@ a{
   line-height: 28px;
   color: #000000;
 }
-.container{
-  background-color: #F8F6F6;
-}
-
 /* ----- img e infos ----- */
 .img-hq{
-
-  width: 250px;
-  height: 280px;
+  width: 290px;
+  height: 330px;
   margin: 60px 0 0 200px;
+  border: 1px solid red;
 }
 .infos-titulo{
   display: flex;
-
   width: 450px;
   float: right;
-  margin: -277px 310px 0 40px;
+  margin: -322px 310px 0 40px;
 }
 .infos-titulo h2{
-  font-family:' Roboto Condensed';
+  font-family:'Inter';
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -78,46 +82,40 @@ a{
   color: #000000;
 }
 .infos-details{
-
   width: 400px;
   height: 80px;
   float: right;
-  margin: -210px 350px -10px 40px;
+  margin: -260px 350px -10px 40px;
 }
 .titulo-details{
   font-family: 'Inter';
   font-style: normal;
   font-weight: bolder;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 15px;
+  line-height: 17px;
   color: #000000;
-
 }
 #published{
-
   margin: 0 100px 20px 0;
   width: 190px;
 }
 #writer{
-  margin: -42px 4px 20px 20px;
+  margin: -40px -29px 20px 20px;
   float: right;
   width: 190px;
 }
 #penciller{
-
   width: 190px;
 }
 #cover{
-
-  margin: -22px 4px 0 20px;
+  margin: -21px -29px 0 60px;
   float: right;
   width: 190px;
 }
 .infos-description{
   display: flex;
-
   float: right;
-  margin: -120px 350px 0 0;
+  margin: -170px 350px 0 0;
   width: 400px;
   height: 110px;
 }
@@ -126,51 +124,64 @@ a{
   margin: 0 0 4px 0;
   width: 400px;
   height: 80px;
-
 }
 #cast{
   display: flex;
   width: 400px;
   height: 20px;
-  margin: 89px 0 0 -400px;
-
+  margin: 134px 0 0 -400px;
 }
 
 
 /* ------ botão ------ */
 .buy{
-
-  width: 814px;
+  width: 890px;
   height: 138px;
   background-color: #F7F8FA;
+  box-shadow: 0px 0px 6px 4px #585959;
   border-radius: 20px;
   margin: 30px 200px 20px 200px;
 }
 .acquire h2{
   display: flex;
-  font-family:'Inter';
+  font-family:'Roboto Condensed';
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 28px;
   color: #000000;
   width: 210px;
-  margin: 20px 0 0 100px;
+  margin: 20px 0 0 135px;
+  padding-top: 20px;
 }
 .acquire p{
-  font-family: 'Inter';
+  font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: 200;
-  font-size: 13px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 20px;
   color: #000000;
-  width: 335px;
+  width: 340px;
   display: flex;
-  margin: 10px 0 0 40px;
+  margin: 10px 0 0 60px;
+}
+.price{
+  display: flex;
+  width: 200px;
+  margin: 10px 0 0 190px;
+}
+.price label{
+  font-family:'Roboto Condensed';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
+  color: #000000;
 }
 .btn{
+  display: flex;
   float: right;
-  margin: -30px 50px 0 0;
+  margin: -90px 100px 0 0;
 }
 .btn button{
   background-color: #ED1D24;
@@ -184,4 +195,5 @@ a{
   color: #F7F8FA;
   width: 225.23px;
   height: 55.26px;
+  margin-bottom: 100px;
 }
