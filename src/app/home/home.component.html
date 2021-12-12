@@ -21,8 +21,8 @@
       <div fxFlex="25" fxFlex.md="33" fxFlex.sm="40" fxFlex.xs="100"  fxLayout="column"
       *ngFor="let hq of hqMarvel | paginate: { itemsPerPage: 12, currentPage: page }; let i = index" id="item">
 
-        <div class="imagens">
-        <a [routerLink]="['/details/:id']"><img src="{{hq.thumbnail.path}}/portrait_incredible.jpg" alt=""></a>
+        <div class="imagens" (click)="goToDetail(hq.id)">
+          <img src="{{hq.thumbnail.path}}/portrait_incredible.jpg" alt="">
         </div>
 
         <div class="titleHq">

@@ -2,6 +2,7 @@ import { MarvelService } from './../services/marvel.service';
 import { Component, Input, OnInit, Output } from '@angular/core';
 import Swal from 'sweetalert2';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   public page = 1;
   public hqMarvel: any = [];
 
- constructor(private marvelService: MarvelService) { }
+ constructor(private marvelService: MarvelService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -24,6 +25,10 @@ export class HomeComponent implements OnInit {
       console.log(this.hqMarvel);
     });
 
+  }
+
+  goToDetail(id: string){
+      this.router.navigate(['details', id]);
   }
 
 

@@ -1,4 +1,4 @@
-import { UserService } from 'src/app/services/user.service';
+
 import { Component, OnInit } from '@angular/core';
 import { MarvelService } from 'src/app/services/marvel.service';
 import {MatSnackBar, MatSnackBarConfig, MatSnackBarModule} from '@angular/material/snack-bar';
@@ -12,29 +12,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ComicDetailsComponent implements OnInit {
 
-  idComic!: any;
-  comicDetails: any;
-  comicTitle!: string;
+  id = ''
+  hq: any;
 
-  constructor(private marvelService: MarvelService, private _snackBar: MatSnackBar,
-    private _activatedRoute: ActivatedRoute,) {
-    this._activatedRoute.params.subscribe(params => {
-        //debugger
-        this.idComic = params['id'];
-      });
+  constructor(private marvelService: MarvelService, private activatedRoute: ActivatedRoute,) {
+      this.id = this.activatedRoute.snapshot.paramMap.get("id") as string;
   }
 
   ngOnInit(): void {
      // debugger
-    this.marvelService.callHqMarvelDetails(this.idComic).subscribe((resultado: any) => {
-      //debugger
-      if(resultado && resultado.data && resultado.data.results)
-        this.idComic =  resultado.data.results;
-
-      //this.comicTitle = this.comicDetails.title;
-
-      console.log(this.idComic);
-    });
+     this.marvelService.getMarvelComicsById(this.id).subscribe(
+      data => {
+        this.hq = data.data.results[0]
+        console.log(data.data.results[0])
+      }
+    )
   }
 
   logout(){
@@ -55,14 +47,10 @@ export class ComicDetailsComponent implements OnInit {
   }
 
   onSubmit(){
-    this._snackBar.open('Successful purchase!', 'x',{
+    /*this._snackBar.open('Successful purchase!', 'x',{
       horizontalPosition: 'center',
       panelClass: ['white-snackbar'],
-    });
+    });*/
   }
-
-
-
-
 
 }
