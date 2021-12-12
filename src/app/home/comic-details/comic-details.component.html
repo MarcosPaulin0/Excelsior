@@ -14,7 +14,7 @@
     <a routerLink="/home"><&nbsp;Back to Comic Books </a>
   </div>
   <div class="img-hq">
-    <img src="{{hq.thumbnail.path}}//portrait_incredible.jpg" alt="">
+    <img src="{{hq.thumbnail.path}}//portrait_uncanny.jpg" alt="">
   </div>
 
   <div class="infos-titulo">
@@ -25,7 +25,7 @@
 
     <div id="published">
       <label for="" class="titulo-details" >Published:</label>
-      <label for="" class="content-details" > </label>
+      <label for="" class="content-details" >  {{hq.dates[0].date}}   </label>
     </div>
     <div id="writer">
        <label for="" class="titulo-details" >Writer:</label>
@@ -45,11 +45,12 @@
   <div class="infos-description">
     <div id="description">
       <label for="" class="titulo-details" >Description</label>
-      <label for="" class="content-details" > {{hq.creators.items[0] ? hq.creators.items[0].name : 'Sem autor'}}</label>
+      <label for="" id="content-details-description" > {{hq.description ? hq.description : 'Undefined'}}</label>
 
     </div>
     <div id="cast">
       <label for="" class="titulo-details" >Cast:</label>
+      <label for="" class="" > {{hq.characters.items[0] ? hq.characters.items[0].name : 'Undefined'}} </label>
     </div>
 
   </div>
@@ -60,7 +61,7 @@
       <p>Read online or on your iPhone, iPad or Android Device</p>
     </div>
     <div class="price">
-      <label for="">$ {{hq.price}}</label>
+      <label for="">$  {{hq.prices[0] ? hq.prices[0].price : 'Undefined'}}</label>
     </div>
     <div class="btn">
       <button type="submit" (click)="onSubmit()" >

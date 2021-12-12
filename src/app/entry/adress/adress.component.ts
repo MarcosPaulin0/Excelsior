@@ -65,17 +65,7 @@ export class AdressComponent implements OnInit {
 
   cadastrar(){
       if(this.cadastroAdress.valid){
-
-        window.localStorage.setItem('cadastroAdress', JSON.stringify(this.cadastroAdress.value));
-
-       /* window.localStorage.getItem('cadastroAdress');
-        let userAdress = JSON.parse(window.localStorage.getItem('cadastroAdress') || '{}');
-        let cep = (userAdress.cep);
-        let adress = (userAdress.adress);
-        let number = (userAdress.number);
-        let  complement= (userAdress.complement);
-        let district = (userAdress.district);
-        let city = (userAdress.city);*/
+       window.localStorage.setItem('cadastroAdress', JSON.stringify(this.cadastroAdress.value));
       }
         this.router.navigateByUrl('/login');
       }
