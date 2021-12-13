@@ -1,14 +1,18 @@
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ComicDetailsComponent } from './comic-details/comic-details.component';
-import { NgxPaginationModule } from 'ngx-pagination';
+
+import { MessaseShowComponent } from './messase-show/messase-show.component';
+import { NgxMaskModule } from 'ngx-mask';
+
 
 
 
@@ -16,15 +20,17 @@ import { NgxPaginationModule } from 'ngx-pagination';
   declarations: [
     HomeComponent,
     ProfileComponent,
-    ComicDetailsComponent
+    ComicDetailsComponent,
+    MessaseShowComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     MatToolbarModule,
-    MatSnackBarModule,
     FlexLayoutModule,
     NgxPaginationModule,
+    MatIconModule,
+    NgxMaskModule. forChild(),
 
   ]
 })

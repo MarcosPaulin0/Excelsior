@@ -44,7 +44,7 @@ a{
 
 .container{
   background-color: #F8F6F6;
-  margin-top: 20px;
+
 }
 .link-home{
   width: 218px;
@@ -65,7 +65,6 @@ a{
   width: 290px;
   height: 330px;
   margin: 60px 0 0 200px;
-  border: 1px solid red;
 }
 .infos-titulo{
   display: flex;
@@ -97,18 +96,19 @@ a{
 }
 #published{
   margin: 0 100px 20px 0;
-  width: 190px;
+  width: 300px;
+  height: 40px;
 }
 #writer{
-  margin: -40px -29px 20px 20px;
+  margin: -60px -100px 20px 20px;
   float: right;
-  width: 190px;
+  width: 220px;
 }
 #penciller{
   width: 190px;
 }
 #cover{
-  margin: -21px -29px 0 60px;
+  margin: -21px -67px 0 60px;
   float: right;
   width: 190px;
 }
@@ -121,7 +121,7 @@ a{
 }
 #description{
   display: flex;
-  margin: 0 0 4px 0;
+  margin: 30px 0 30px 0;
   width: 400px;
   height: 80px;
 }
@@ -138,14 +138,16 @@ a{
   font-size: 13px;
   line-height: 16px;
   color: #000000;
-
-
+}
+.content-details-p{
+  width: 270px;
+  margin-left: 6px;
 }
 #cast{
   display: flex;
   width: 400px;
   height: 20px;
-  margin: 134px 0 0 -400px;
+  margin: 240px 0 0 -400px;
 }
 
 

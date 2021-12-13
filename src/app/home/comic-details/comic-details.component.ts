@@ -1,9 +1,9 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,} from '@angular/core';
 import { MarvelService } from 'src/app/services/marvel.service';
-import {MatSnackBar, MatSnackBarConfig, MatSnackBarModule} from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
 import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-comic-details',
@@ -12,8 +12,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ComicDetailsComponent implements OnInit {
 
-  id = ''
+  id = '';
   hq: any;
+  data: any;
+  sale = false;
+
 
   constructor(private marvelService: MarvelService, private activatedRoute: ActivatedRoute,) {
       this.id = this.activatedRoute.snapshot.paramMap.get("id") as string;
@@ -23,11 +26,24 @@ export class ComicDetailsComponent implements OnInit {
      // debugger
      this.marvelService.getMarvelComicsById(this.id).subscribe(
       data => {
-        this.hq = data.data.results[0]
-        console.log(data.data.results[0])
+        this.hq = data.data.results[0];
+        console.log(data.data.results[0]);
+        this.data = this.hq.dates[0].date;
+
+
       }
     )
   }
+
+  onSubmit(){
+
+    this.sale = true;
+  }
+
+  closeMessage(event: boolean){
+    this.sale = event;
+  }
+
 
   logout(){
     Swal.fire({
@@ -46,11 +62,5 @@ export class ComicDetailsComponent implements OnInit {
     })
   }
 
-  onSubmit(){
-    /*this._snackBar.open('Successful purchase!', 'x',{
-      horizontalPosition: 'center',
-      panelClass: ['white-snackbar'],
-    });*/
-  }
 
 }

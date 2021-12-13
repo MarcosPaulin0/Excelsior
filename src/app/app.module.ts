@@ -11,6 +11,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 
+
 @NgModule({
   declarations: [
     AppComponent
@@ -25,6 +26,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     HttpClientModule,
     HomeModule,
     NgxPaginationModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

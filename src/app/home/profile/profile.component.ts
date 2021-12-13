@@ -11,7 +11,7 @@ export class ProfileComponent implements OnInit {
   name!: string;
   email!: string;
   adress!: string;
-  contact!: string;
+  contact!: any;
   cardNumber!: string;
   cardHolderName!: string;
   validity!: string;
@@ -23,11 +23,9 @@ export class ProfileComponent implements OnInit {
     //window.localStorage.getItem('cadastroAccount');
     let usuarioAccount = JSON.parse(window.localStorage.getItem('cadastroAccount') || '{}');
     this.nickname = (usuarioAccount.nickname);
-    this.name = (usuarioAccount.firstName + '' + usuarioAccount.lastName);
+    this.name = (usuarioAccount.firstName + ' ' + usuarioAccount.lastName);
     this.email = (usuarioAccount.email);
-    let contactVar = (usuarioAccount.contact);
-    let novoContato= contactVar.slice(0,2)+ ' ' + contactVar.slice(2,7)+ '-' + contactVar.slice(7,11);
-    this.contact = novoContato;
+    this.contact  = (usuarioAccount.contact);
 
     //window.localStorage.getItem('cadastroAdress');
     let usuarioAdress = JSON.parse(window.localStorage.getItem('cadastroAdress') || '{}');

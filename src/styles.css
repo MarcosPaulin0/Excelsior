@@ -7,7 +7,7 @@ html{
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.white-snackbar{
+/*.white-snackbar{
   background-color: #F7F8FA ;
   width: 438px;
   height: 120px;
@@ -23,11 +23,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   border-radius: 25px;
   margin: 30px 20px;
 }
+.white-snackbar .mat-simple-snackbar-action {
+  background-color: red;
+}
 span.mat-button-wrapper{
- margin: 0 6px 0 0 ;
+ margin: -30px 0 6px 0  ;
 }
 
 .mat-snack-bar-container {
   margin: 0 80px 100px 0 !important;
-}
+}*/
 

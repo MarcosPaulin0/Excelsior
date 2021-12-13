@@ -73,7 +73,7 @@ export class AccountComponent implements OnInit {
     if(this.cadastroAccount.valid){
       window.localStorage.setItem('cadastroAccount', JSON.stringify(this.cadastroAccount.value));
 
-    this.router.navigateByUrl('/payment');
+      this.router.navigateByUrl('/payment');
 
     }
   }

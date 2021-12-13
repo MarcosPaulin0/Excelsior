@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Condensed:wght@400;700&display=swap');
+
+
+.container{
+  width: 800px;
+  margin: 0;
+
+}
+.message{
+  position: absolute;
+  width: 438px;
+  height: 181px;
+  margin: -294px 0 0 420px;
+  background-color: #F7F8FA;
+  box-shadow:  0px 0px 0px 800px rgba(0.548, 0.548, 0.548, 0.548);
+  border-radius: 20px;
+
+}
+.content-message label{
+  display: flex;
+  font-family:'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  width: 250px;
+  padding: 80px 200px 0 70px;
+}
+.close{
+  width: 20px;
+}
+.fechar{
+  /*background-color: #000000;*/
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  margin: -86px 0 0 400px;
+}

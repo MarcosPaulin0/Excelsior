@@ -65,6 +65,7 @@ export class AdressComponent implements OnInit {
 
   cadastrar(){
       if(this.cadastroAdress.valid){
+
        window.localStorage.setItem('cadastroAdress', JSON.stringify(this.cadastroAdress.value));
       }
         this.router.navigateByUrl('/login');

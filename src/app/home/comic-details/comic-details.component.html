@@ -25,19 +25,19 @@
 
     <div id="published">
       <label for="" class="titulo-details" >Published:</label>
-      <label for="" class="content-details" >  {{hq.dates[0].date}}   </label>
+      <label for="" class="content-details-p" >{{data | date:'MMMM, d ,y' }}</label>
     </div>
     <div id="writer">
        <label for="" class="titulo-details" >Writer:</label>
-       <label for="" class="content-details">  {{hq.creators.items[0] ? hq.creators.items[1].name : 'Sem autor'}} </label>
+       <label for="" class="content-details">  {{hq.creators.items[0] ? hq.creators.items[1].name : 'Undefined'}} </label>
     </div>
     <div id="penciller">
       <label for="" class="titulo-details" >Penciller:</label>
-      <label for="" class="content-details">  {{hq.creators.items[0] ? hq.creators.items[0].name : 'Sem autor'}} </label>
+      <label for="" class="content-details">  {{hq.creators.items[0] ? hq.creators.items[0].name : 'Undefined'}} </label>
     </div>
     <div id="cover">
        <label for="" class="titulo-details" >Cover Artist:</label>
-       <label for="" class="content-details">  {{hq.creators.items[0] ? hq.creators.items[0].name : 'Sem autor'}} </label>
+       <label for="" class="content-details">  {{hq.creators.items[0] ? hq.creators.items[0].name : 'Undefined'}} </label>
     </div>
 
   </div>
@@ -64,10 +64,10 @@
       <label for="">$  {{hq.prices[0] ? hq.prices[0].price : 'Undefined'}}</label>
     </div>
     <div class="btn">
-      <button type="submit" (click)="onSubmit()" >
-        Buy Digital Issue
-      </button>
+      <button (click)="onSubmit()">Buy Digital Issue</button>
     </div>
   </div>
 
 </div>
+
+<app-messase-show (fecharMensagem)="closeMessage($event)" *ngIf="sale"></app-messase-show>
